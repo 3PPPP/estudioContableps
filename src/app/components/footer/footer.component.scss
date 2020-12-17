@@ -1,6 +1,7 @@
 .div-primary {
   background-color: #333442;
   padding: 50px;
+  border-top: 2px solid #d3ac36;
 }
 
 div {
@@ -17,4 +18,8 @@ img {
   text-align: justify;
   color: white;
   font-family: Futura, Trebuchet MS, sans-serif;
+}
+
+.column {
+  padding-bottom: 10px;
 }

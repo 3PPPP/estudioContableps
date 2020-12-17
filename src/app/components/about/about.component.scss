@@ -1,6 +1,6 @@
 .div-primary {
-  background-color: #333442;
-  padding: 50px;
+  //background-color: #333442;
+  padding: 25px;
 }
 
 div {
@@ -21,26 +21,20 @@ div {
 
 .title-1 {
   text-align: left;
-  color: white;
+  color:#333442;
   font-family: Futura, Trebuchet MS, sans-serif;
+  padding-bottom: 25px ;
 }
 
 .text-1 {
   text-align: justify;
-  color: white;
+  color: #333442;
   font-family: Futura, Trebuchet MS, sans-serif;
+  font-size: 20px;
 }
 
-hr.divider {
-  max-width: 5rem;
-  border-width: 0.2rem;
-  border-color: #d3ac36;
-  max-width: 100%;
-  margin: 0px;
-}
 
 img {
   align-self: left;
   width: 100%;
-  border: 1px solid #000000;
 }

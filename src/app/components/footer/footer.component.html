@@ -5,16 +5,34 @@
 <div class="div-primary">
 <div class="row text-1">
     <div class="col-sm">
-        <img src="./../../../assets/logo.png" alt="">
-    </div>
-    <div class="col-sm">
+        <img src="./../../../assets/logo.png" alt="" class="column">
         <p><i class="fas fa-phone"></i>  3516871099 </p>
-    </div>
-    <div class="col-sm">
         <p><i class="fas fa-envelope"></i>  estudiocontableps@gmail.com</p>
+        <p><i class="fas fa-map-pin"></i>  Fajardo 1881, Córdoba</p>
     </div>
     <div class="col-sm">
-        <p><i class="fas fa-map-pin"></i>  Fajardo 1881, Cordoba</p>
+        <p>{{ "Servicios" | uppercase }}</p>
+        <p>Impositivo</p>
+        <p>Contabilidad y Auditoría</p>
+        <p>Laboral y Previsional</p>
+    </div>
+    <div class="col-sm">
+        <p>{{ "Contacto" | uppercase }}</p>
+        <form>
+            <div class="form-group column">
+                <input type="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre (Obligatorio)">
+              </div>
+            <div class="form-group column">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico (Obligatorio)">
+            </div>
+            <div class="form-group column">
+              <input type="asunto" class="form-control" id="exampleInputPassword1" placeholder="Asunto">
+            </div>
+            <div class="form-group column">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+          </form>
     </div>
 </div>
 </div>
