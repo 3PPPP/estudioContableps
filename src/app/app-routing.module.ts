@@ -6,23 +6,25 @@ import { ServicesComponent } from './components/services/services.component';
 import { ImpositivoComponent } from './components/impositivo/impositivo.component';
 import { ContabilidadComponent } from './components/contabilidad/contabilidad.component';
 import { LaboralComponent } from './components/laboral/laboral.component';
+import { FilosofiaComponent } from './components/filosofia/filosofia.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/inicio',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'inicio',
     component: HomeComponent
   },
   {
-    path: "about",
+    path: "nosotros",
     component: AboutComponent
   },
   {
-    path: 'services',
+    path: 'servicios',
     component: ServicesComponent
   },
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path: 'laboral',
     component: LaboralComponent
+  },
+  {
+    path: 'filosofia',
+    component: FilosofiaComponent
+  },
+  {
+    path: 'contacto',
+    component: ContactComponent
   },
 ];
 

@@ -11,6 +11,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ImpositivoComponent } from './components/impositivo/impositivo.component';
 import { ContabilidadComponent } from './components/contabilidad/contabilidad.component';
 import { LaboralComponent } from './components/laboral/laboral.component';
+import { FilosofiaComponent } from './components/filosofia/filosofia.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LaboralComponent } from './components/laboral/laboral.component';
     ServicesComponent,
     ImpositivoComponent,
     ContabilidadComponent,
-    LaboralComponent
+    LaboralComponent,
+    FilosofiaComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
