@@ -8,7 +8,9 @@ import { MessageService } from '../../services/message.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(public _MessageService: MessageService) { }
+  constructor(public _MessageService: MessageService) { 
+    window.scroll(0, 0);
+  }
 
   ngOnInit(): void {
   }

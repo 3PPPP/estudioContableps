@@ -1,39 +1,24 @@
-.div-primary {
-    //background-color: #333442;
-    padding: 25px;
-  }
-  
-.title-1 {
-    text-align: left;
-    color:#333442;
-    font-family: Futura, Trebuchet MS, sans-serif;
-    padding-bottom: 5px;
-    padding-top: 10px;
-    border-bottom: 1px solid #c0c0c2;
+.container-primary {
+  padding: 4%;
 }
 
-.card-deck {
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-top: 20px;
+.title-1 {
+  text-align: left;
+  color: #333442;
+  font-family: Futura, Trebuchet MS, sans-serif;
+  border-bottom: 1px solid #c0c0c2;
 }
-  
+
 .zoom:hover {
-    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.05
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
-.title-move{
-  padding-left: 75px;
-  padding-right: 75px;
-}
-
-.title-2 {
-  text-align: left;
-  color:#333442;
-  font-family: Futura, Trebuchet MS, sans-serif;
-  padding-bottom: 25px ;
+.card-deck {
+  padding-top: 10px;
 }
