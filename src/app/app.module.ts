@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +18,7 @@ import { ContabilidadComponent } from './components/contabilidad/contabilidad.co
 import { LaboralComponent } from './components/laboral/laboral.component';
 import { FilosofiaComponent } from './components/filosofia/filosofia.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { ContactComponent } from './components/contact/contact.component';
     ContabilidadComponent,
     LaboralComponent,
     FilosofiaComponent,
-    ContactComponent
+    ContactComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

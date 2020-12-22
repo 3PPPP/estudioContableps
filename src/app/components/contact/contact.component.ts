@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../../services/message.service';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -8,11 +9,34 @@ import { MessageService } from '../../services/message.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(public _MessageService: MessageService) { 
+  FormContacto!: FormGroup;
+  submitted = false;
+
+
+  constructor(
+    public _MessageService: MessageService,
+    public formBuilder: FormBuilder,
+    ) { 
+    
     window.scroll(0, 0);
+
   }
 
   ngOnInit(): void {
+
+    this.FormContacto = this.formBuilder.group({
+      Nombre: [
+        "",
+        [Validators.required, Validators.minLength(2), Validators.maxLength(55)]
+      ],
+      Email: [
+        "",
+        [Validators.required, Validators.email]
+      ],
+
+    });
+
+
   }
 
   contactForm(form: any) {

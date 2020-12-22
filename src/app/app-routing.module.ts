@@ -8,6 +8,7 @@ import { ContabilidadComponent } from './components/contabilidad/contabilidad.co
 import { LaboralComponent } from './components/laboral/laboral.component';
 import { FilosofiaComponent } from './components/filosofia/filosofia.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
     path: 'contacto',
     component: ContactComponent
   },
+  {
+    path: 'clientes',
+    component: ClientsComponent
+  }
 ];
 
 @NgModule({
