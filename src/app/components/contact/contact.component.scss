@@ -8,9 +8,10 @@ img {
 
 .text-1 {
   text-align: justify;
-  color: black;
+  color: #333442;
   font-family: Futura, Trebuchet MS, sans-serif;
   padding-top: 20px;
+  font-size: 17px;
 }
 
 .title-1 {
@@ -22,8 +23,26 @@ img {
 
 .modal-text {
   padding-bottom: 1px;
+  color: #333442;
+  font-family: Futura, Trebuchet MS, sans-serif;
+  font-size: 17px;
 }
 
-.btn-secondary{
+.modal-title {
+  color: #333442;
+  font-family: Futura, Trebuchet MS, sans-serif;
+}
+
+.btn-secondary {
   background: #333442;
+  float: right;
+}
+
+a {
+  color: #333442;
+  text-decoration: none;
+}
+
+a:active {
+  color: #333442;
 }

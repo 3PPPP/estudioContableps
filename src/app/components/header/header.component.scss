@@ -9,7 +9,7 @@
   outline: 3px solid #333442;
 }
 
-.navbar-collapse{
+.navbar-collapse {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -23,5 +23,9 @@ img {
 }
 
 .nav-link > a.active {
-  color: #d3ac36 ;
+  color: #d3ac36;
+}
+
+.nav-link {
+  font-size: 17px;
 }

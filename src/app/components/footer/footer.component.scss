@@ -1,7 +1,7 @@
 .div-primary {
   background-color: #333442;
   border-top: 3px solid #d3ac36;
-  outline: 3px solid  #333442;
+  outline: 3px solid #333442;
 }
 
 div {
@@ -14,15 +14,15 @@ div {
 img {
   width: 160px;
   //centrar imagen
-  display:block;
-  margin:auto;
-  
+  display: block;
+  margin: auto;
 }
 
 .text-1 {
   text-align: justify;
   color: white;
   font-family: Futura, Trebuchet MS, sans-serif;
+  font-size: 17px;
 }
 
 .column {
@@ -31,4 +31,13 @@ img {
 
 .right {
   float: right;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:active {
+  color: whitesmoke;
 }

@@ -35,8 +35,13 @@ export class ContactComponent implements OnInit {
       Email: [
         "",
         [Validators.required, Validators.email]
+      ],
+      Asunto: [
+        null
+      ],
+      Mensaje: [
+        null
       ]
-
     });
 
 
