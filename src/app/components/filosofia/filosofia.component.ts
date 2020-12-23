@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FilosofiaComponent implements OnInit {
 
   constructor() { 
+    
     window.scroll(0, 0);
   }
 

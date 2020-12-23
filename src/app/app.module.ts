@@ -19,6 +19,7 @@ import { LaboralComponent } from './components/laboral/laboral.component';
 import { FilosofiaComponent } from './components/filosofia/filosofia.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ClientsComponent } from './components/clients/clients.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ClientsComponent } from './components/clients/clients.component';
     LaboralComponent,
     FilosofiaComponent,
     ContactComponent,
-    ClientsComponent
+    ClientsComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,7 @@ import { ClientsComponent } from './components/clients/clients.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
