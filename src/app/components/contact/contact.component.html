@@ -29,7 +29,7 @@
               </span>
           </div>
         <div class="form-group column">
-          <input type="asunto" class="form-control" name="asunto" placeholder="Asunto" ngModel> 
+          <textarea type="asunto" class="form-control" row="1" formControlName="Asunto" placeholder="Asunto" ngModel></textarea> 
         </div>
         <div class="form-group column">
           <input type="email" class="form-control" formControlName="Email" 
@@ -45,9 +45,21 @@
               </span>
         </div>
         <div class="form-group column">
-            <textarea class="form-control" rows="10" name="mensaje" placeholder="Mensaje" ngModel></textarea>
+          <textarea type="mensaje" class="form-control"  rows="10" formControlName="Mensaje" placeholder="Mensaje" ngModel></textarea> 
         </div>
-        <button type="submit" class="btn btn-secondary">Enviar</button>
+        <button type="submit" class="btn btn-secondary" (click)="openModal(template)">Enviar</button>
+      <ng-template #template>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Contacto</h4>
+          <button type="button" class="close pull-right" arial-label="Close" (click)="modalRef.hide()">
+            <span arial-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">Tu consulta se ha enviado correctamente.</p>
+          <button type="submit" class="btn btn-secondary" (click)="modalRef.hide()">Cerrar <i class="fas fa-times"></i></button>
+        </div>
+      </ng-template>
       </form>
     </div>
   </div>

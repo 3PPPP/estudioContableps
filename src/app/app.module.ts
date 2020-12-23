@@ -20,6 +20,8 @@ import { FilosofiaComponent } from './components/filosofia/filosofia.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
