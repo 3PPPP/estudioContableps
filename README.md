@@ -1,6 +1,6 @@
 # Estudio Contable Penzo Semcoff
 
-Proyecto desarroyado para brindar una página web de presentación al Estudio Contable Penzo Semcoff  
+Proyecto desarrollado para brindar una página web de presentación al Estudio Contable Penzo Semcoff  
 
 ## Herramientas  
 
