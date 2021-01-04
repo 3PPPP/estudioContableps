@@ -1,46 +1,73 @@
-<!-- Carousel-->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-  </ul>
-  <div class="carousel-inner" >
-    <div class="carousel-item active">
-      <img class="d-block h-100" src="../../../assets/home1.webp" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="title-1"><strong>{{'Bien ser' | uppercase}}</strong></h5>
-        <p class="text-1">Implica actuar con honestidad, responsabilidad, y disciplina en el trabajo.</p>
+<body>
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+      <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+              <a href="https://bootstrapcreative.com/">
+                   <picture>
+                    <source srcset="https://i.ibb.co/PjfYZLC/1400-800.png" media="(min-width: 1400px)">
+                    <source srcset="https://i.ibb.co/PjfYZLC/1400-800.png" media="(min-width: 769px)">
+                     <source srcset="https://i.ibb.co/PjfYZLC/1400-800.png" media="(min-width: 577px)">
+                    <img srcset="https://i.ibb.co/PjfYZLC/1400-800.png" alt="responsive image" class="d-block img-fluid">
+                  </picture>
+
+                  <div class="carousel-caption">
+                      <div>
+                          <h2>Digital Craftsmanship</h2>
+                          <p>We meticously build each site to get results</p>
+                          <span class="btn btn-sm btn-outline-secondary">Learn More</span>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="carousel-item">
+              <a href="https://bootstrapcreative.com/">
+                   <picture>
+                    <source srcset="https://i.ibb.co/KqWxHzs/IMG-7199.jpg" media="(min-width: 1400px)">
+                    <source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)">
+                     <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                    <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+                  </picture>
+
+                  <div class="carousel-caption justify-content-center align-items-center">
+                      <div>
+                          <h2>Every project begins with a sketch</h2>
+                          <p>We work as an extension of your business to explore solutions</p>
+                          <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="carousel-item">
+              <a href="https://bootstrapcreative.com/">
+                   <picture>
+                    <source srcset="https://i.ibb.co/KqWxHzs/IMG-7199.jpg" media="(min-width: 1400px)">
+                    <source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)">
+                     <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                    <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
+                  </picture>
+
+                  <div class="carousel-caption justify-content-center align-items-center">
+                      <div>
+                          <h2>Performance Optimization</h2>
+                          <p>We monitor and optimize your site's long-term performance</p>
+                          <span class="btn btn-sm btn-secondary">Learn How</span>
+                      </div>
+                  </div>
+              </a>
+          </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block h-100" src="../../../assets/slide1.webp" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="title-1"><strong>{{'Bien hacer' | uppercase}}</strong></h5>
-        <p class="text-1">Desempeñar el trabajo de forma correcta desde un principio.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block h-100" src="../../../assets/home8.webp" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="title-1"><strong>{{'Bien estar' | uppercase}}</strong></h5>
-        <p class="text-1">Significa dar más de lo que se recibe y es sinónimo de felicidad porque diste lo mejor de tí a todas las personas con la que tuviste la fortuna de tratar.</p>
-      </div>
-    </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
   </div>
-  <div class="carousel-item">
-    <img class="d-block h-100" src="../../../assets/home8.webp" alt="Fourth slide">
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class="title-1"><strong>{{'Bien tener' | uppercase}}</strong></h5>
-      <p class="text-1">No busquen tener el bien rápido y fácil sin hacerlo bien y mucho menos sin sentirlo bien, es el resultado de desarrollar los tres pasos anteriores.</p>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+</body>
