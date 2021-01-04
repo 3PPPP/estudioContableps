@@ -1,22 +1,26 @@
 .title-1 {
   font-family: Futura, Trebuchet MS, sans-serif;
   font-size: 35px;
-  text-align: left;
+  padding-top: 150px;
 }
 
 .text-1 {
   font-family: Futura, Trebuchet MS, sans-serif;
   font-size: 25px;
-  text-align: left;
 }
 
 img {
   filter: brightness(65%);
 }
 
+/*.carousel-caption {
+  right: 20%;
+  transform: translateY(-120%);
+}*/
+
 .carousel-caption {
-  right: 50%;
-  transform: translateY(-20%);
+  top: 0;
+  bottom: auto;
 }
 
 #header-carousel {
@@ -24,5 +28,5 @@ img {
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 95px;
 }

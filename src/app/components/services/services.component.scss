@@ -10,9 +10,7 @@
 }
 
 .zoom:hover {
-  transform: scale(
-    1.05
-  );
+  transform: scale(1.05);
 }
 
 p {
@@ -23,7 +21,7 @@ p {
   padding-top: 10px;
 }
 
-.card-title{
+.card-title {
   text-align: justify;
   color: #333442;
   font-family: Futura, Trebuchet MS, sans-serif;
@@ -35,4 +33,8 @@ p {
   color: #333442;
   font-family: Futura, Trebuchet MS, sans-serif;
   font-size: 17px;
+}
+
+body {
+  padding-top: 70px;
 }
