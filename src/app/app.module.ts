@@ -22,6 +22,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ContactService } from './contact.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
@@ -47,7 +49,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BrowserAnimationsModule,
     ModalModule.forRoot()
   ],
-  providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [MessageService, ContactService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

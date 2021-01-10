@@ -1,7 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { MessageService } from '../../services/message.service';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ContactService } from '../../contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,9 +19,10 @@ export class ContactComponent implements OnInit {
   constructor(
     public _MessageService: MessageService,
     public formBuilder: FormBuilder,
-    private modalService: BsModalService
-    ) { 
-    
+    private modalService: BsModalService,
+    private contact: ContactService
+  ) {
+
     window.scroll(0, 0);
 
   }
@@ -28,10 +30,10 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
 
     this.FormContacto = this.formBuilder.group({
-      Nombre: [
+      Nombre: new FormControl(
         "",
         [Validators.required, Validators.minLength(2), Validators.maxLength(55)]
-      ],
+      ),
       Email: [
         "",
         [Validators.required, Validators.email]
@@ -49,14 +51,14 @@ export class ContactComponent implements OnInit {
 
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
-    console.log("Mensaje enviado")
+      console.log("Mensaje enviado")
     });
   }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
     window.scroll(0, 0);
-    this.FormContacto = this.formBuilder.group({
+    /*this.FormContacto = this.formBuilder.group({
       Nombre: [
         "",
         [Validators.required, Validators.minLength(2), Validators.maxLength(55)]
@@ -72,7 +74,19 @@ export class ContactComponent implements OnInit {
         null
       ]
 
-    });
+    });*/
+  }
+
+  onSubmit(FormContacto: any) {
+    console.log(FormContacto)
+    this.contact.PostMessage(FormContacto)
+      .subscribe(response => {
+        //location.href = 'https://mailthis.to/confirm'
+        console.log(response)
+      }, error => {
+        console.warn(error.responseText)
+        console.log({ error })
+      })
   }
 
 
