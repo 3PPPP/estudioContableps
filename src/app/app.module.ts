@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MessageService } from './services/message.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +48,7 @@ import { ContactService } from './contact.service';
     BrowserAnimationsModule,
     ModalModule.forRoot()
   ],
-  providers: [MessageService, ContactService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [ ContactService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { MessageService } from '../../services/message.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ContactService } from '../../contact.service';
@@ -17,7 +16,6 @@ export class ContactComponent implements OnInit {
 
 
   constructor(
-    public _MessageService: MessageService,
     public formBuilder: FormBuilder,
     private modalService: BsModalService,
     private contact: ContactService
@@ -32,61 +30,66 @@ export class ContactComponent implements OnInit {
     this.FormContacto = this.formBuilder.group({
       Nombre: new FormControl(
         "",
-        [Validators.required, Validators.minLength(2), Validators.maxLength(55)]
+        [Validators.required]
       ),
       Email: [
         "",
         [Validators.required, Validators.email]
       ],
       Asunto: [
-        null
+        "",
+        [Validators.required]
       ],
       Mensaje: [
-        null
+        "",
+        [Validators.required]
       ]
     });
 
 
   }
 
-  contactForm(form: any) {
-    this._MessageService.sendMessage(form).subscribe(() => {
-      console.log("Mensaje enviado")
-    });
-  }
 
   openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
     window.scroll(0, 0);
-    /*this.FormContacto = this.formBuilder.group({
+    this.submitted = true;
+    if (this.FormContacto.invalid) {
+      return;
+    }
+    this.modalRef = this.modalService.show(template);    
+  }
+
+  onSubmit(FormContacto: any) {
+    this.contact.PostMessage(FormContacto)
+      .subscribe(response => {
+      }, error => {
+        console.warn(error.responseText)
+        console.log({ error })
+      })
+  }
+
+  limpiarForm(){
+    this.modalRef.hide();
+    this.FormContacto = this.formBuilder.group({
       Nombre: [
         "",
-        [Validators.required, Validators.minLength(2), Validators.maxLength(55)]
+        [Validators.required]
       ],
       Email: [
         "",
         [Validators.required, Validators.email]
       ],
       Asunto: [
-        null
+        "",
+        [Validators.required]
       ],
       Mensaje: [
-        null
+        "",
+        [Validators.required]
       ]
 
-    });*/
-  }
-
-  onSubmit(FormContacto: any) {
-    console.log(FormContacto)
-    this.contact.PostMessage(FormContacto)
-      .subscribe(response => {
-        //location.href = 'https://mailthis.to/confirm'
-        console.log(response)
-      }, error => {
-        console.warn(error.responseText)
-        console.log({ error })
-      })
+    });
+    this.submitted = false;
   }
 
 

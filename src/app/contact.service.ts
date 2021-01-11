@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class ContactService {
 
-  private api = 'http://sofipigino.ml/testphpmailer.php'
+  private api = 'https://estudiocontableps.com.ar/testphpmailer.php'
 
   constructor(private http: HttpClient) { }
 
