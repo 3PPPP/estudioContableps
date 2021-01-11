@@ -6,6 +6,7 @@ Proyecto desarrollado para brindar una página web de presentación al Estudio C
 
 * Angular
 * Git
+* PHP 
 
 ## Desarrollado por
 
